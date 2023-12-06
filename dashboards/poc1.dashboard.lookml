@@ -1,5 +1,5 @@
 - dashboard: poc1
-  title: "POC #1: API"
+  title: "POC #1: API + Button"
   layout: grid
   preferred_viewer: dashboards-next
 
