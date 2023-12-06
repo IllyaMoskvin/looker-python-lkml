@@ -15,6 +15,7 @@
       type: button
       # TODO: Refactor this to be a link with params
       # https://www.googlecloudcommunity.com/gc/Exploring-Curating-Data/Can-I-Pass-a-Parameter-Value-from-a-Dashboard-to-another-one/td-p/575090
+      # https://www.googlecloudcommunity.com/gc/Modeling/Creating-hyperlinked-button-dimensions/td-p/572971
       rich_content_json: '{
         "text": "Run Model",
         "description": "Click, wait for model to run, then rerun query",
