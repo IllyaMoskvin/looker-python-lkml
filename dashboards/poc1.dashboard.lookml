@@ -5,30 +5,26 @@
 
   rows:
     - elements: [get_results]
-      height: 100
+      height: 250
     - elements: [kpi_linechart]
       height: 600
 
 
   elements:
     - name: get_results
-      type: button
-      # TODO: Refactor this to be a link with params
-      # https://www.googlecloudcommunity.com/gc/Exploring-Curating-Data/Can-I-Pass-a-Parameter-Value-from-a-Dashboard-to-another-one/td-p/575090
-      # https://www.googlecloudcommunity.com/gc/Modeling/Creating-hyperlinked-button-dimensions/td-p/572971
-      rich_content_json: '{
-        "text": "Run Model",
-        "description": "Click, wait for model to run, then rerun query",
-        "newTab": true,
-        "alignment": "center",
-        "size": "large",
-        "style": "FILLED",
-        "color": "blue",
-        "href": "http://35.209.63.1761"
-      }'
+      type: single_value
+      model: poc1
+      explore: poc1
+      measures: [poc1.run_model_button]
+      show_single_value_title: false
+      filters:
+        poc1.is_button: "Yes"
+      listen:
+        foo: poc1.foo
+        bar: poc1.bar
 
     - name: kpi_linechart
-      title: "KPI Trend"
+      title: "Projected Revenue"
       type: looker_line
       model: poc1
       explore: poc1
