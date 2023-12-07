@@ -47,6 +47,8 @@ looker.plugins.visualizations.add({
         m("pre", JSON.stringify(config)),
         m("h4", "Details"),
         m("pre", JSON.stringify(details)),
+        m("h4", "Query Response"),
+        m("pre", JSON.stringify(queryResponse)),
         m("h4", "First Cell"),
         m("pre", firstCell),
       ])
