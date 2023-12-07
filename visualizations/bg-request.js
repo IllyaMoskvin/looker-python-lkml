@@ -48,7 +48,7 @@ looker.plugins.visualizations.add({
         m("h4", "Details"),
         m("pre", JSON.stringify(details)),
         m("h4", "First Cell"),
-        m("p", firstCell),
+        m("pre", firstCell),
       ])
     ])
 
