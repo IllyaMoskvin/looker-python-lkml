@@ -10,7 +10,7 @@
 
   elements:
     - name: kpi_linechart
-      title: "KPI Trend"
+      title: "Projected Revenue"
       type: looker_line
       model: poc2
       explore: poc2
@@ -42,8 +42,13 @@
     - name: bar
       title: "Bar"
       type: string_filter
-      default_value: "foobar"
+      default_value: "A"
       allow_multiple_values: False
       required: true
       ui_config:
+        type: button_toggles
         display: inline
+        options:
+         - "A"
+         - "B"
+         - "C"

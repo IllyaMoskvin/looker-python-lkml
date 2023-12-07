@@ -17,6 +17,7 @@ view: shared {
   measure: revenue {
     description: "An example output measure"
     type: number
+    value_format_name: "usd_0"
     sql: SUM(${TABLE}.revenue) ;;
   }
 }
