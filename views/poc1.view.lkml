@@ -33,7 +33,7 @@ view: poc1 {
         <li>Click "Update" and wait for query to complete</li>
         <li>If line chart says "No results", click "Run Model"</li>
         <li>Wait for the page that pops up to say that results are ready</li>
-        <li>Tab back to Looker and re-run your query</li>
+        <li>Tab back to Looker, wait a moment, and re-run your query</li>
       </ol>
       <a
         href="http://looker-py-poc1.imoskvin.com?foo={{ foo }}&bar={{ bar }}" target="_new"
