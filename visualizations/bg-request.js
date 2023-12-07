@@ -15,7 +15,11 @@ looker.plugins.visualizations.add({
   create: function(element, config) {
 
     // Test Mithril
-    m.render(element, "Hello World!")
+    m.render(element, [
+      m("main", [
+        m("pre", JSON.stringify(config)),
+      ])
+    ])
 
   },
   // Render in response to the data or settings changing
@@ -33,6 +37,20 @@ looker.plugins.visualizations.add({
     // Grab the first cell of the data
     var firstRow = data[0];
     var firstCell = firstRow[queryResponse.fields.dimensions[0].name];
+
+    // Insert the data with mithril
+    m.render(element, [
+      m("main", [
+        m("h4", "Data"),
+        m("pre", JSON.stringify(data)),
+        m("h4", "Config"),
+        m("pre", JSON.stringify(config)),
+        m("h4", "Details"),
+        m("pre", JSON.stringify(details)),
+        m("h4", "First Cell"),
+        m("p", firstCell),
+      ])
+    ])
 
     // Insert the data into the page
     // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
